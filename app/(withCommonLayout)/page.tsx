@@ -1,3 +1,4 @@
+import BrilliantStudentSection from "@/components/pagesUi/Home/BrilliantStudentSection/BrilliantStudentSection";
 import ClassroomCarousel from "@/components/pagesUi/Home/ClassroomSection/ClassroomSection";
 import HeroSlider from "@/components/pagesUi/Home/HeroSlider/HeroSlider";
 import EnhancedGallery from "@/components/pagesUi/Home/ImageGallery/ImageGallery";
@@ -139,6 +140,7 @@ const HomePage = () => {
     <div className="mt-16 ">
       <HeroSlider />
       <NoticeBoard />
+      <BrilliantStudentSection />
       <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
         <div className=" py-12 ">
           <EnhancedGallery
