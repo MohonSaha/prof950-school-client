@@ -25,7 +25,7 @@ export function SchoolInfoBar({ className }: SchoolInfoBarProps) {
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
         {/* School Name */}
         <div className="font-semibold mb-1 sm:mb-0">
-          শত্রুজিৎপুর আঃ গণি মাধ্যমিক বালিকা বিদ্যালয়
+          শত্রুজিৎপুর আব্দুল গণি মাধ্যমিক বালিকা বিদ্যালয়
         </div>
 
         {/* Info Items */}

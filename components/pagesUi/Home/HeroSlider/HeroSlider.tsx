@@ -1,9 +1,8 @@
 "use client"; // Add this for client-side component in Next.js
 
 import React, { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, MapPin } from "lucide-react";
+import { BadgeInfo, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -13,28 +12,28 @@ const HeroSlider = () => {
   const properties = [
     {
       id: 1,
-      title: "Griya Asri Tamansari",
-      location: "Austin, Texas",
+      title: "আধুনিক শিক্ষা ব্যবস্থা",
+      schoolInfo: "শিক্ষা ও প্রশিক্ষণ",
       description:
-        "Nestled in the serene landscapes of Austin, Taman Harmoni Village offers a perfect blend of modern living and natural tranquility.",
-      imageUrl: "https://i.ibb.co.com/YBQYw6bR/real-2.jpg", // Updated to use local images in public folder
+        "আমাদের স্কুলে রয়েছে অত্যাধুনিক শিক্ষা ব্যবস্থা যেখানে ব্যবহার করা হয় মাল্টিমিডিয়া ক্লাসরুম, স্মার্ট বোর্ড এবং ই-লার্নিং প্ল্যাটফর্ম।",
+      imageUrl: "https://i.ibb.co.com/Z1Xc7pr8/image-1.jpg",
     },
     {
       id: 2,
-      title: "Permata Indah Residence",
-      location: "San Diego, California",
+      title: "নিয়মিত পরীক্ষার ব্যবস্থা",
+      schoolInfo: "পরীক্ষা ও মূল্যায়ন",
       description:
-        "A luxurious residential complex featuring contemporary design with spacious living areas and premium amenities.",
-      imageUrl: "https://i.ibb.co.com/LDfhVHzs/real-1.jpg",
+        "শিক্ষার্থীদের নিয়মিত মূল্যায়নের জন্য মাসিক, ত্রৈমাসিক ও বার্ষিক পরীক্ষা নেওয়া হয়। পরীক্ষার ফলাফল বিশ্লেষণ করে দুর্বল শিক্ষার্থীদের জন্য বিশেষ কোচিং ব্যবস্থা রয়েছে।",
+      imageUrl:
+        "https://i.ibb.co.com/C3j5KNBB/414953596-3633051243632926-4580349660113298640-n.jpg",
     },
     {
       id: 3,
-      title: "Griya Tamansari",
-      location: "Orlando, Florida",
+      title: "সহ-পাঠ কার্যক্রম",
+      schoolInfo: "ক্লাব ও সংগঠন",
       description:
-        "Modern family homes designed with comfort and elegance, surrounded by lush gardens and community spaces.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "শিক্ষার্থীদের সৃজনশীল বিকাশের জন্য বিতর্ক ক্লাব, বিজ্ঞান ক্লাব, সাংস্কৃতিক সংগঠন ও খেলাধুলার ক্লাব রয়েছে।",
+      imageUrl: "https://i.ibb.co.com/ymh9Ptjt/image-3.jpg",
     },
   ];
 
@@ -93,9 +92,9 @@ const HeroSlider = () => {
                             {property.title}
                           </h2>
                           <div className="flex items-center mb-3 justify-center">
-                            <MapPin className="w-4 h-4 mr-1" />
+                            <BadgeInfo className="w-4 h-4 mr-1" />
                             <span className="text-sm text-center">
-                              {property.location}
+                              {property.schoolInfo}
                             </span>
                           </div>
                           <p className="text-sm text-gray-200 mx-auto text-center">
@@ -104,9 +103,9 @@ const HeroSlider = () => {
                         </div>
                       </div>
 
-                      <Button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-900/80 hover:bg-gray-800 text-white rounded-full w-24 h-24">
+                      {/* <Button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-900/80 hover:bg-gray-800 text-white rounded-full w-24 h-24">
                         <Link href="/listings">Details</Link>
-                      </Button>
+                      </Button> */}
                     </div>
                   </CardContent>
                 </Card>

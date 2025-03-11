@@ -3,6 +3,7 @@ import ClassroomCarousel from "@/components/pagesUi/Home/ClassroomSection/Classr
 import HeroSlider from "@/components/pagesUi/Home/HeroSlider/HeroSlider";
 import EnhancedGallery from "@/components/pagesUi/Home/ImageGallery/ImageGallery";
 import NoticeBoard from "@/components/pagesUi/Home/NoticeBoard/NoticeBoard";
+import SchoolIntroductionSection from "@/components/pagesUi/Home/SchoolIntroductionSection/SchoolIntroductionSection";
 import TeacherSection from "@/components/pagesUi/Home/TeachersSections/TeachersSections";
 
 const HomePage = () => {
@@ -140,7 +141,10 @@ const HomePage = () => {
     <div className="mt-16 ">
       <HeroSlider />
       <NoticeBoard />
+
       <BrilliantStudentSection />
+
+      <SchoolIntroductionSection rounded={false} />
       <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
         <div className=" py-12 ">
           <EnhancedGallery

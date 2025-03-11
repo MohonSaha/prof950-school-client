@@ -31,36 +31,60 @@ import {
 import { SchoolInfoBar } from "../SchoolInfoBar/SchoolInfoBar";
 
 const navigation = [
-  { name: "হোম", href: "/" },
-  { name: "লিস্টিংস", href: "/listings" },
-  { name: "মূল্য নির্ধারণ", href: "#pricing" },
+  { name: "প্রধান পাতা", href: "/" },
   { name: "আমাদের সম্পর্কে", href: "/about" },
+  // { name: "একাডেমিক", href: "/academic" },
+  { name: "ভর্তি", href: "/admission" },
+  { name: "ফলাফল", href: "/results" },
+  { name: "রুটিন", href: "/routine" },
+  { name: "নোটিশ", href: "/notices" },
+  { name: "গ্যালারি", href: "/gallery" },
   { name: "যোগাযোগ", href: "/contact" },
-];
-
-const components = [
-  { title: "অ্যালার্ট ডায়ালগ", href: "/docs/primitives/alert-dialog" },
-  { title: "হোভার কার্ড", href: "/docs/primitives/hover-card" },
-  { title: "প্রগতি", href: "/docs/primitives/progress" },
-  { title: "টুলটিপ", href: "/docs/primitives/tooltip" },
 ];
 
 const resources = [
   {
-    title: "ডকুমেন্টেশন",
-    href: "/docs",
-    description: "ডেভেলপারদের জন্য বিশদ এপিআই ডকুমেন্টেশন।",
-  },
-  {
-    title: "গাইড",
-    href: "/guides",
+    title: "শিক্ষক মণ্ডলী",
+    href: "/academic/teachers",
     description: "শুরু করার জন্য ধাপে ধাপে টিউটোরিয়াল।",
   },
   {
-    title: "সমর্থন",
-    href: "/support",
-    description: "সাহায্য এবং কমিউনিটি সমর্থন পান।",
+    title: "শ্রেণি রুটিন",
+    href: "/academic/class-routine",
+    description: "শুরু করার জন্য ধাপে ধাপে টিউটোরিয়াল।",
   },
+  {
+    title: "পরীক্ষার সময়সূচি",
+    href: "/academic/exam-schedule",
+    description: "শুরু করার জন্য ধাপে ধাপে টিউটোরিয়াল।",
+  },
+  {
+    title: "পাঠ্যক্রম",
+    href: "/academic/syllabus",
+    description: "শুরু করার জন্য ধাপে ধাপে টিউটোরিয়াল।",
+  },
+  {
+    title: "ছাত্র কাউন্সিল",
+    href: "/academic/student-council",
+    description: "শুরু করার জন্য ধাপে ধাপে টিউটোরিয়াল।",
+  },
+];
+
+// const admissionDropdown = [
+//   { title: "ভর্তি নীতিমালা", href: "/admission/policy" },
+//   { title: "ভর্তি ফর্ম", href: "/admission/form" },
+//   { title: "ফি কাঠামো", href: "/admission/fees" },
+//   { title: "ভর্তি পরীক্ষা", href: "/admission/entrance-exam" },
+//   { title: "প্রায়শই জিজ্ঞাসিত প্রশ্ন", href: "/admission/faq" },
+// ];
+
+const components = [
+  { title: "লাইব্রেরি", href: "/facilities/library" },
+  { title: "বিজ্ঞান ল্যাব", href: "/facilities/science-lab" },
+  { title: "কম্পিউটার ল্যাব", href: "/facilities/computer-lab" },
+  { title: "খেলার মাঠ", href: "/facilities/playground" },
+  { title: "ক্যান্টিন", href: "/facilities/canteen" },
+  { title: "পরিবহন", href: "/facilities/transport" },
 ];
 
 export function Navbar() {
@@ -77,13 +101,13 @@ export function Navbar() {
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center space-x-2">
               <span className="inline-block h-6 w-6 rounded-full bg-primary"></span>
-              <span className="text-xl font-bold">SAHA AGENCY</span>
+              {/* <span className="text-xl font-bold">SAHA AGENCY</span> */}
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex md:gap-4 lg:gap-6">
-            {navigation.slice(0, 3).map((item) => (
+            {navigation.slice(0, 2).map((item) => (
               <Button
                 key={item.name}
                 variant={pathname === item.href ? "default" : "ghost"}
@@ -98,7 +122,7 @@ export function Navbar() {
               <NavigationMenuList>
                 {/* Resources Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
+                  <NavigationMenuTrigger>একাডেমিক</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-2">
                       {resources.map((resource) => (
@@ -116,7 +140,7 @@ export function Navbar() {
 
                 {/* Components Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+                  <NavigationMenuTrigger>সুবিধা সমূহ</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                       {components.map((component) => (
@@ -134,7 +158,7 @@ export function Navbar() {
               </NavigationMenuList>
             </NavigationMenu>
 
-            {navigation.slice(3, 5).map((item) => (
+            {navigation.slice(3, navigation.length).map((item) => (
               <Button
                 key={item.name}
                 variant={pathname === item.href ? "default" : "ghost"}
@@ -147,7 +171,7 @@ export function Navbar() {
 
           <div className="flex items-center gap-4">
             {/* User Dropdown */}
-            <DropdownMenu>
+            {/* <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="icon" className="rounded-full">
                   <Avatar className="md:h-10 md:w-10 h-8 w-8 cursor-pointer">
@@ -168,7 +192,10 @@ export function Navbar() {
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>Log out</DropdownMenuItem>
               </DropdownMenuContent>
-            </DropdownMenu>
+            </DropdownMenu> */}
+            <Button asChild variant="ghost">
+              <Link href="/login">লগইন</Link>
+            </Button>
 
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -185,7 +212,7 @@ export function Navbar() {
                 <div className="flex flex-col gap-4 py-4">
                   <Link href="/" className="flex items-center space-x-2 pl-4">
                     <span className="inline-block h-6 w-6 rounded-full bg-primary"></span>
-                    <span className="text-xl font-bold">SAHA AGENCY</span>
+                    {/* <span className="text-xl font-bold">SAHA AGENCY</span> */}
                   </Link>
 
                   {/* Regular navigation items */}
