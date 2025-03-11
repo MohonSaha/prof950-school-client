@@ -107,7 +107,7 @@ const CustomLayoutGallery: React.FC<CustomLayoutGalleryProps> = ({
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="py-8 md:px-10 px-4">
       <header className=" py-6">
         <div className="max-w-7xl mx-auto px-4">
           <h1 className="text-4xl font-bold text-center">

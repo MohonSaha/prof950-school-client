@@ -2,6 +2,7 @@ import ClassroomCarousel from "@/components/pagesUi/Home/ClassroomSection/Classr
 import HeroSlider from "@/components/pagesUi/Home/HeroSlider/HeroSlider";
 import EnhancedGallery from "@/components/pagesUi/Home/ImageGallery/ImageGallery";
 import NoticeBoard from "@/components/pagesUi/Home/NoticeBoard/NoticeBoard";
+import TeacherSection from "@/components/pagesUi/Home/TeachersSections/TeachersSections";
 
 const HomePage = () => {
   const galleryImages = [
@@ -139,7 +140,7 @@ const HomePage = () => {
       <HeroSlider />
       <NoticeBoard />
       <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
-        <div className="max-w-7xl mx-auto py-12 px-4">
+        <div className=" py-12 ">
           <EnhancedGallery
             images={galleryImages}
             title="Photo Gallery"
@@ -152,6 +153,7 @@ const HomePage = () => {
         title="একনজরে স্কুলের শ্রেণি কক্ষ গুলো"
         subtitle="প্লে থেকে দশম শ্রেণী পর্যন্ত যা যা থাকছে।"
       />
+      <TeacherSection />
     </div>
   );
 };

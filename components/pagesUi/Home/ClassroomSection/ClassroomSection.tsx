@@ -146,8 +146,8 @@ const ClassroomCarousel: React.FC<ClassroomCarouselProps> = ({
   const circularClassrooms = getCircularClassrooms();
 
   return (
-    <div className="w-full bg-gray-100 py-8 px-4">
-      <div className="max-w-6xl mx-auto">
+    <div className="w-full bg-gray-100 py-8 md:px-8 px-4">
+      <div className="">
         {/* Title Section */}
         <div className="mb-6 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-2">
@@ -185,7 +185,7 @@ const ClassroomCarousel: React.FC<ClassroomCarouselProps> = ({
                       alt={classroom.title}
                       layout="fill"
                       objectFit="cover"
-                      className="rounded-lg "
+                      className="object-cover transition-transform duration-300 hover:scale-105 rounded-lg"
                     />
                   </div>
                   <CardContent className="px-4">
@@ -202,7 +202,7 @@ const ClassroomCarousel: React.FC<ClassroomCarouselProps> = ({
                     </p>
                   </CardContent>
                   <CardFooter className="p-4 pt-0">
-                    <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white">
+                    <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white cursor-pointer">
                       {classroom.buttonText}
                     </Button>
                   </CardFooter>
