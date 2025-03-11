@@ -5,36 +5,38 @@ import { Info } from "lucide-react";
 import Image from "next/image";
 
 export default function NoticeBoard() {
-  const [selectedCategory, setSelectedCategory] = useState("cricket");
+  const [selectedCategory, setSelectedCategory] = useState("latest");
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
   const scrollRef = useRef(null);
 
   // Sample categories to match the image
   const categories = [
-    { id: "latest", label: "Latest" },
-    { id: "cricket", label: "National cricket team" },
-    { id: "mixes", label: "Mixes" },
-    { id: "confidence", label: "Self-confidence" },
-    { id: "visas", label: "Travel visas" },
-    { id: "javascript", label: "JavaScript" },
-    { id: "ai", label: "AI" },
-    { id: "english", label: "English (United Kingdom)" },
-    { id: "live", label: "Live" },
-    { id: "goals", label: "Goals" },
-    { id: "startup", label: "Startup company" },
+    { id: "latest", label: "সর্বশেষ বিজ্ঞপ্তি" },
+    { id: "admission", label: "ভর্তি সংক্রান্ত" },
+    { id: "exam", label: "পরীক্ষা সম্পর্কিত" },
+    { id: "result", label: "ফলাফল প্রকাশ" },
+    { id: "holiday", label: "ছুটির নোটিশ" },
+    { id: "events", label: "অনুষ্ঠান ও কর্মসূচি" },
+    { id: "sports", label: "ক্রীড়া সংক্রান্ত" },
+    { id: "scholarship", label: "বৃত্তি ও অনুদান" },
+    { id: "teachers", label: "শিক্ষক ও কর্মচারী নোটিশ" },
+    { id: "meeting", label: "সভা ও কার্যক্রম" },
+    { id: "rules", label: "নিয়ম ও নির্দেশিকা" },
+    { id: "misc", label: "অন্যান্য" },
   ];
 
   const introCards = [
     {
       id: "headmaster",
-      title: "Headmaster Introduction",
-      image: "https://i.ibb.co.com/bs2bL1b/team3.jpg",
-      name: "Dr. James Wilson",
+      title: "Headmaster Image",
+      image:
+        "https://i.ibb.co.com/993bjTXy/462719185-3803756793225010-4459295209552193269-n.jpg",
+      name: "Abdur Razzak",
       designation: "Headmaster",
     },
     {
       id: "chairman",
-      title: "Board Chairman Introduction",
+      title: "Board Chairman Image",
       image: "https://i.ibb.co.com/bs2bL1b/team3.jpg",
       name: "Mr. Robert Johnson",
       designation: "Board Chairman",
@@ -114,13 +116,13 @@ export default function NoticeBoard() {
 
         {/* Notice Content - Professional color scheme */}
         <div className="flex-1 bg-gray-50 p-4">
-          <h2 className="text-lg font-bold mb-2 text-gray-800">Notice Board</h2>
+          <h2 className="text-xl font-bold mb-2 text-gray-800">নোটিশ বোর্ড</h2>
           <ScrollArea className="h-[350px] w-full">
             <div className="space-y-2 pr-2">
               {filteredNotices.map((notice) => (
                 <div
                   key={notice.id}
-                  className="p-3 bg-white border-l-4 border-l-teal-500 border-y border-r border-gray-200 rounded shadow-sm hover:shadow transition-all"
+                  className="p-3 bg-white border-l-4 border-l-teal-500 border-y border-r border-gray-200 rounded shadow-sm hover:shadow transition-all cursor-pointer hover:border-blue-600 duration-300"
                 >
                   <h3 className="font-medium text-gray-800">{notice.title}</h3>
                   <p className="text-sm text-gray-600">{notice.content}</p>

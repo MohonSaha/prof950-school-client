@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Phone, MapPin, Clock } from "lucide-react";
+import { Phone, MapPin, Clock, Building } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   Tooltip,
@@ -25,7 +25,7 @@ export function SchoolInfoBar({ className }: SchoolInfoBarProps) {
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
         {/* School Name */}
         <div className="font-semibold mb-1 sm:mb-0">
-          Wellcome to, Shatrujitpur abdul gani girls school.
+          শত্রুজিৎপুর আঃ গণি মাধ্যমিক বালিকা বিদ্যালয়
         </div>
 
         {/* Info Items */}
@@ -35,8 +35,22 @@ export function SchoolInfoBar({ className }: SchoolInfoBarProps) {
             <Tooltip>
               <TooltipTrigger asChild>
                 <div className="flex items-center gap-1">
+                  <Building className="h-4 w-4" />
+                  <span className=" md:inline">EIIN: 117940</span>
+                </div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>School EIIN</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="flex items-center gap-1">
                   <MapPin className="h-4 w-4" />
-                  <span className="hidden md:inline">Shatrujitpur, Magura</span>
+                  <span className=" md:inline">Shatrujitpur, Magura</span>
                 </div>
               </TooltipTrigger>
               <TooltipContent>
@@ -64,7 +78,7 @@ export function SchoolInfoBar({ className }: SchoolInfoBarProps) {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <div className="flex items-center gap-1">
+                <div className=" hidden md:flex items-center gap-1">
                   <Clock className="h-4 w-4" />
                   <span>(24/7) Facility</span>
                 </div>
