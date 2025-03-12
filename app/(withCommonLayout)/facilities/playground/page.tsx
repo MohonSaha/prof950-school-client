@@ -349,6 +349,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Users, Info } from "lucide-react";
+import Image from "next/image";
 
 const PlaygroundPage = () => {
   // বাংলা ভাষায় খেলার মাঠের তথ্য
@@ -457,10 +458,17 @@ const PlaygroundPage = () => {
               </div>
             </div>
             <div className="">
-              <img
+              {/* <img
                 src={playgroundInfo.images[0].src}
                 alt={playgroundInfo.images[0].alt}
                 className="w-full h-full rounded-lg shadow-md"
+              /> */}
+              <Image
+                src={playgroundInfo.images[0].src}
+                alt={playgroundInfo.images[0].alt}
+                width={500}
+                height={300}
+                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300 rounded-md"
               />
             </div>
           </div>
@@ -477,9 +485,16 @@ const PlaygroundPage = () => {
               key={index}
               className="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
             >
-              <img
+              {/* <img
                 src={image.src}
                 alt={image.alt}
+                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              /> */}
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={500}
+                height={300}
                 className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
               />
               <div className="p-3 bg-white">

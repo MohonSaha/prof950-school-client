@@ -15,6 +15,7 @@ import {
   ChevronRight,
   MapPin,
 } from "lucide-react";
+import Image from "next/image";
 
 // বিজ্ঞান ল্যাব সুবিধাসমূহের তথ্য
 const labFacilities = [
@@ -31,7 +32,8 @@ const labFacilities = [
       "চৌম্বকীয় অধ্যয়ন সরঞ্জাম",
       "তাপ ও তরঙ্গ অধ্যয়ন সামগ্রী",
     ],
-    imageUrl: "/api/placeholder/600/400",
+    imageUrl:
+      "https://img.freepik.com/free-vector/flat-laboratory-room-with-chemical-structure_23-2148885008.jpg?semt=ais_hybrid",
     time: "সোম-বৃহ: সকাল ১০টা - দুপুর ১টা",
   },
   {
@@ -47,7 +49,8 @@ const labFacilities = [
       "গ্লাসওয়্যার এবং লেবরেটরি উপকরণ",
       "pHমিটার ও টাইট্রেশন সেট",
     ],
-    imageUrl: "/api/placeholder/600/400",
+    imageUrl:
+      "https://img.freepik.com/free-vector/flat-laboratory-room-with-microscope_23-2148885022.jpg",
     time: "সোম-বৃহ: দুপুর ২টা - বিকাল ৪টা",
   },
   {
@@ -63,7 +66,8 @@ const labFacilities = [
       "বিভিন্ন প্রাণী ও উদ্ভিদের নমুনা",
       "ডিসেকশন কিট ও অঙ্গসংস্থান চার্ট",
     ],
-    imageUrl: "/api/placeholder/600/400",
+    imageUrl:
+      "https://img.freepik.com/free-vector/flat-laboratory-room-illustration_23-2148888190.jpg",
     time: "মঙ্গল-বৃহ: সকাল ১১টা - দুপুর ১টা",
   },
   {
@@ -79,7 +83,8 @@ const labFacilities = [
       "গ্রাফিক্যাল অ্যানালাইসিস টুল",
       "সেন্সর ও ডিজিটাল মাপন সরঞ্জাম",
     ],
-    imageUrl: "/api/placeholder/600/400",
+    imageUrl:
+      "https://img.freepik.com/free-vector/cartoon-laboratory-room-with-equipment_52683-59398.jpg?t=st=1741773130~exp=1741776730~hmac=48c73175d8e59dbf3025b2c4f85a3e4221bf021c42b1d4cae4b8ad667a768d41&w=1060",
     time: "সোম-শুক্র: বিকাল ৩টা - সন্ধ্যা ৬টা",
   },
 ];
@@ -186,6 +191,13 @@ const ScienceLabFacilitiesPage: React.FC = () => {
                   alt={`${lab.title} এর ছবি`}
                   className="w-full h-full object-cover"
                 />
+
+                {/* <Image
+                  src={lab.imageUrl}
+                  alt={`${lab.title} এর ছবি`}
+                  layout="fill"
+                  objectFit="w-full h-full cover"
+                /> */}
               </div>
             </div>
           </TabsContent>
