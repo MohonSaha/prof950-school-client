@@ -47,27 +47,31 @@ const resources = [
   {
     title: "শিক্ষক মণ্ডলী",
     href: "/academic/teachers",
-    description: "শুরু করার জন্য ধাপে ধাপে টিউটোরিয়াল।",
+    description: "আমাদের সম্মানিত শিক্ষক মণ্ডলীর তালিকা এবং তাদের বিবরণ দেখুন।",
   },
   {
     title: "শ্রেণি রুটিন",
     href: "/academic/class-routine",
-    description: "শুরু করার জন্য ধাপে ধাপে টিউটোরিয়াল।",
+    description:
+      "আপনার শ্রেণির সময়সূচি এবং ক্লাসের বিস্তারিত তথ্য এখানে পাবেন।",
   },
   {
     title: "পরীক্ষার সময়সূচি",
     href: "/academic/exam-schedule",
-    description: "শুরু করার জন্য ধাপে ধাপে টিউটোরিয়াল।",
+    description:
+      "সাম্প্রতিক পরীক্ষার সময়সূচি এবং গুরুত্বপূর্ণ তথ্য এখানে পাবেন।",
   },
   {
     title: "পাঠ্যক্রম",
     href: "/academic/syllabus",
-    description: "শুরু করার জন্য ধাপে ধাপে টিউটোরিয়াল।",
+    description:
+      "বিভিন্ন শ্রেণির জন্য প্রযোজ্য পাঠ্যক্রম এবং শিক্ষাসূচি সম্পর্কে জানুন।",
   },
   {
     title: "ছাত্র কাউন্সিল",
     href: "/academic/student-council",
-    description: "শুরু করার জন্য ধাপে ধাপে টিউটোরিয়াল।",
+    description:
+      "ছাত্র কাউন্সিল সম্পর্কে জানুন এবং তাদের কার্যক্রম অনুসরণ করুন।",
   },
 ];
 
@@ -80,12 +84,39 @@ const resources = [
 // ];
 
 const components = [
-  { title: "লাইব্রেরি", href: "/facilities/library" },
-  { title: "বিজ্ঞান ল্যাব", href: "/facilities/science-lab" },
-  { title: "কম্পিউটার ল্যাব", href: "/facilities/computer-lab" },
-  { title: "খেলার মাঠ", href: "/facilities/playground" },
-  { title: "ক্যান্টিন", href: "/facilities/canteen" },
-  { title: "পরিবহন", href: "/facilities/transport" },
+  {
+    title: "লাইব্রেরি",
+    href: "/facilities/library",
+    description: "বই, গবেষণা উপকরণ এবং শিক্ষার জন্য সমৃদ্ধ লাইব্রেরি।",
+  },
+  {
+    title: "বিজ্ঞান ল্যাব",
+    href: "/facilities/science-lab",
+    description:
+      "আধুনিক সরঞ্জামসমৃদ্ধ বিজ্ঞান ল্যাব গবেষণা এবং পরীক্ষা-নিরীক্ষার জন্য।",
+  },
+  {
+    title: "কম্পিউটার ল্যাব",
+    href: "/facilities/computer-lab",
+    description:
+      "উন্নত প্রযুক্তিসম্পন্ন কম্পিউটার ল্যাব শিক্ষার্থীদের অনুশীলনের জন্য।",
+  },
+  {
+    title: "খেলার মাঠ",
+    href: "/facilities/playground",
+    description: "শিক্ষার্থীদের খেলাধুলা এবং বিনোদনের জন্য প্রশস্ত খেলার মাঠ।",
+  },
+  {
+    title: "ক্যান্টিন",
+    href: "/facilities/canteen",
+    description:
+      "পরিষ্কার ও স্বাস্থ্যকর খাবার পরিবেশনকারী ক্যাম্পাস ক্যান্টিন।",
+  },
+  {
+    title: "পরিবহন",
+    href: "/facilities/transport",
+    description: "নিরাপদ এবং সুবিধাজনক শিক্ষার্থী পরিবহন ব্যবস্থা।",
+  },
 ];
 
 export function Navbar() {
@@ -150,7 +181,7 @@ export function Navbar() {
                           href={component.href}
                           title={component.title}
                         >
-                          UI elements built with Radix and Tailwind.
+                          {component.description}
                         </ListItem>
                       ))}
                     </ul>
@@ -308,7 +339,7 @@ export function Navbar() {
                                 {component.title}
                               </div>
                               <p className="text-sm text-muted-foreground">
-                                UI elements built with Radix and Tailwind.
+                                {component.description}
                               </p>
                             </Link>
                           </div>

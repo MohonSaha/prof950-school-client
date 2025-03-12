@@ -254,13 +254,13 @@ const Footer = () => {
                   </a>
                 </div>
                 <a
-                  href="https://facebook.com/prof950"
+                  href="https://www.facebook.com/spdmohonsaha/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center md:justify-end text-sm text-blue-300 hover:text-blue-200"
                 >
                   <Facebook size={16} className="mr-1" />
-                  Follow Prof950 on Facebook
+                  Follow Mohon Saha on Facebook
                 </a>
                 <a
                   href="mailto:contact@prod950.com"
