@@ -4,17 +4,17 @@ import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, ChevronDown, ChevronRight } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+// import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+// import {
+//   DropdownMenu,
+//   DropdownMenuContent,
+//   DropdownMenuItem,
+//   DropdownMenuLabel,
+//   DropdownMenuSeparator,
+//   DropdownMenuTrigger,
+// } from "@/components/ui/dropdown-menu";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -37,9 +37,10 @@ const navigation = [
   { name: "ভর্তি", href: "/admission" },
   { name: "ফলাফল", href: "/results" },
   { name: "রুটিন", href: "/routine" },
-  { name: "নোটিশ", href: "/notices" },
+  // { name: "নোটিশ", href: "/notices" },
   { name: "গ্যালারি", href: "/gallery" },
   { name: "যোগাযোগ", href: "/contact" },
+  { name: "নিরাপত্তা ও সহায়তা", href: "/safety-support" },
 ];
 
 const resources = [
@@ -95,7 +96,7 @@ export function Navbar() {
 
   return (
     <>
-      <header className="fixed md:px-10 px-4 left-0 top-0 z-50 w-full bg-background/100 backdrop-blur supports-[backdrop-filter]:bg-background/100">
+      <header className="md:sticky md:px-10 px-4 left-0 top-0 z-50 w-full bg-background/100 backdrop-blur supports-[backdrop-filter]:bg-background/100">
         <SchoolInfoBar className="relative z-50 bg-white border-b" />
         <div className="container flex h-16 items-center justify-between border-b">
           <div className="flex items-center gap-2">
@@ -239,7 +240,7 @@ export function Navbar() {
                         variant="ghost"
                         className="justify-between w-full px-4"
                       >
-                        <span>Resources</span>
+                        <span>একাডেমিক</span>
                         {mobileResourcesOpen ? (
                           <ChevronDown className="h-4 w-4" />
                         ) : (
@@ -283,7 +284,7 @@ export function Navbar() {
                         variant="ghost"
                         className="justify-between w-full px-4"
                       >
-                        <span>Components</span>
+                        <span>সুবিধা সমূহ</span>
                         {mobileComponentsOpen ? (
                           <ChevronDown className="h-4 w-4" />
                         ) : (
@@ -317,7 +318,7 @@ export function Navbar() {
                   </Collapsible>
 
                   {/* Remaining navigation items */}
-                  {navigation.slice(3, 5).map((item) => (
+                  {navigation.slice(3, navigation.length).map((item) => (
                     <Button
                       key={item.name}
                       variant={pathname === item.href ? "default" : "ghost"}

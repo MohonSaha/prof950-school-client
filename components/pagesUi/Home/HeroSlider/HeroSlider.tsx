@@ -75,7 +75,7 @@ const HeroSlider = () => {
           >
             {properties.map((property) => (
               <div key={property.id} className="w-full flex-shrink-0">
-                <Card className="relative border-0 shadow-xl h-96 md:min-h-[80vh] overflow-hidden rounded-none">
+                <Card className="relative border-0 shadow-xl h-96 md:min-h-[80vh] overflow-hidden rounded-none py-0">
                   <CardContent className="p-0">
                     <div className="relative w-full h-96 md:min-h-[80vh]">
                       <Image
