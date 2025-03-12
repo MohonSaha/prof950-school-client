@@ -240,7 +240,7 @@ export default function NoticeBoard() {
       {/* Left side - Notice Board - Set to 500px height */}
       <div className="flex-1 flex flex-col border rounded-sm overflow-hidden shadow-md h-500">
         {/* Categories - Using professional school colors */}
-        <div className="bg-teal-600 relative flex items-center px-2">
+        <div className="bg-green-700 relative flex items-center px-2">
           {/* Scrollable categories */}
           <div
             ref={scrollRef}
@@ -254,8 +254,8 @@ export default function NoticeBoard() {
                 className={`inline-block px-4 py-1.5 mx-1 rounded-md text-sm font-medium transition-colors
                   ${
                     selectedCategory === category.id
-                      ? "bg-white text-teal-700"
-                      : "bg-teal-500 text-white hover:bg-teal-400"
+                      ? "bg-white text-green-700"
+                      : "bg-green-600 text-white hover:bg-green-500"
                   }`}
               >
                 {category.label}
@@ -272,7 +272,7 @@ export default function NoticeBoard() {
               {filteredNotices.map((notice) => (
                 <div
                   key={notice.id}
-                  className="p-3 bg-white border-l-4 border-l-teal-500 border-y border-r border-gray-200 rounded shadow-sm hover:shadow transition-all cursor-pointer hover:border-blue-600 duration-300"
+                  className="p-3 bg-white border-l-4 border-l-green-600 border-y border-r border-gray-200 rounded shadow-sm hover:shadow transition-all cursor-pointer hover:border-blue-600 duration-300"
                 >
                   <h3 className="font-medium text-gray-800">{notice.title}</h3>
                   <p className="text-sm text-gray-600">{notice.content}</p>
@@ -288,7 +288,7 @@ export default function NoticeBoard() {
         </div>
 
         {/* See More - Professional accent color */}
-        <div className="bg-gradient-to-r from-teal-800 to-teal-700 text-white p-2 text-center cursor-pointer hover:from-teal-700 hover:to-teal-600 transition-colors">
+        <div className="bg-gradient-to-r from-green-800 to-green-700 text-white p-2 text-center cursor-pointer hover:from-green-700 hover:to-green-600 transition-colors">
           সকল নোটিশ দেখুন
         </div>
       </div>

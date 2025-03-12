@@ -143,7 +143,7 @@ const BrilliantStudentSection: React.FC = () => {
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold mb-2">
             <span className="text-gray-800">একনজরে</span>
-            <span className="text-purple-600"> G.P.A 5.00</span>
+            <span className="text-green-600"> G.P.A 5.00</span>
             <span className="text-gray-800"> শিক্ষার্থী</span>
           </h2>
           <p className="text-gray-600">

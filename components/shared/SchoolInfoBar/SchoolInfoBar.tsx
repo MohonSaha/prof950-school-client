@@ -24,12 +24,12 @@ export function SchoolInfoBar({ className }: SchoolInfoBarProps) {
     >
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
         {/* School Name */}
-        <div className="font-semibold mb-1 sm:mb-0 md:text-md text-sm">
+        <div className="font-semibold mb-1 sm:mb-0 md:text-md text-sm text-green-600">
           শত্রুজিৎপুর আব্দুল গণি মাধ্যমিক বালিকা বিদ্যালয়
         </div>
 
         {/* Info Items */}
-        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-sm">
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-sm text-green-700">
           {/* Location */}
           <TooltipProvider>
             <Tooltip>

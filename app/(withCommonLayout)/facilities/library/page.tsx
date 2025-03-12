@@ -33,19 +33,19 @@ const LibraryPage = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
         <Card className="flex flex-col items-center text-center p-6">
-          <Book size={48} className="text-blue-600 mb-4" />
+          <Book size={48} className="text-green-600 mb-4" />
           <CardTitle className="text-xl mb-2">বিশাল বইয়ের সংগ্রহ</CardTitle>
           <CardDescription>২০,০০০+ বই, পত্রিকা এবং ই-বুক</CardDescription>
         </Card>
 
         <Card className="flex flex-col items-center text-center p-6">
-          <Users size={48} className="text-blue-600 mb-4" />
+          <Users size={48} className="text-green-600 mb-4" />
           <CardTitle className="text-xl mb-2">অধ্যয়ন স্থান</CardTitle>
           <CardDescription>১০০+ আসন সহ শান্ত অধ্যয়নের পরিবেশ</CardDescription>
         </Card>
 
         <Card className="flex flex-col items-center text-center p-6">
-          <Clock size={48} className="text-blue-600 mb-4" />
+          <Clock size={48} className="text-green-600 mb-4" />
           <CardTitle className="text-xl mb-2">সময়সূচী</CardTitle>
           <CardDescription>
             সোমবার থেকে শুক্রবার: সকাল ৮টা - বিকাল ৪টা
@@ -131,7 +131,7 @@ const LibraryPage = () => {
             <CardContent>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
-                  <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="h-6 w-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                     ১
                   </div>
                   <p>
@@ -140,13 +140,13 @@ const LibraryPage = () => {
                   </p>
                 </li>
                 <li className="flex items-start gap-2">
-                  <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="h-6 w-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                     ২
                   </div>
                   <p>লাইব্রেরিতে খাবার ও পানীয় নিষিদ্ধ।</p>
                 </li>
                 <li className="flex items-start gap-2">
-                  <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="h-6 w-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                     ৩
                   </div>
                   <p>
@@ -154,7 +154,7 @@ const LibraryPage = () => {
                   </p>
                 </li>
                 <li className="flex items-start gap-2">
-                  <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="h-6 w-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                     ৪
                   </div>
                   <p>
@@ -163,13 +163,13 @@ const LibraryPage = () => {
                   </p>
                 </li>
                 <li className="flex items-start gap-2">
-                  <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="h-6 w-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                     ৫
                   </div>
                   <p>লাইব্রেরি কার্ড ছাড়া কোনো বই ধার দেওয়া হবে না।</p>
                 </li>
                 <li className="flex items-start gap-2">
-                  <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="h-6 w-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                     ৬
                   </div>
                   <p>
@@ -255,15 +255,15 @@ const LibraryPage = () => {
             },
           ].map((book, index) => (
             <Card key={index} className="overflow-hidden">
-              <div className="h-40 bg-blue-100 flex items-center justify-center">
-                <Book size={64} className="text-blue-500" />
+              <div className="h-40 bg-green-100 flex items-center justify-center">
+                <Book size={64} className="text-green-500" />
               </div>
               <CardContent className="pt-4">
                 <h3 className="font-bold mb-1">{book.title}</h3>
                 <p className="text-sm text-gray-600 mb-1">
                   লেখক: {book.author}
                 </p>
-                <p className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full inline-block">
+                <p className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full inline-block">
                   {book.category}
                 </p>
               </CardContent>

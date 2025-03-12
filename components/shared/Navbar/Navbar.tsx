@@ -29,11 +29,11 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { SchoolInfoBar } from "../SchoolInfoBar/SchoolInfoBar";
+import Image from "next/image";
 
 const navigation = [
   { name: "প্রধান পাতা", href: "/" },
   { name: "আমাদের সম্পর্কে", href: "/about" },
-  // { name: "একাডেমিক", href: "/academic" },
   { name: "ভর্তি", href: "/admission" },
   { name: "ফলাফল", href: "/results" },
   { name: "রুটিন", href: "/routine" },
@@ -132,8 +132,17 @@ export function Navbar() {
         <div className="container flex h-16 items-center justify-between border-b">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center space-x-2">
-              <span className="inline-block h-6 w-6 rounded-full bg-primary"></span>
-              {/* <span className="text-xl font-bold">SAHA AGENCY</span> */}
+              <div className="relative">
+                <div className="h-[70px] w-[70px] rounded-full p-1 -ml-3">
+                  <Image
+                    src="https://i.ibb.co.com/LD27kXxw/473068280-3922681521336562-55110548601466905-n-fotor-bg-remover-20250312165419.png"
+                    alt="Mohon Saha"
+                    width={70}
+                    height={70}
+                    className="h-full w-full rounded-full object-cover border-2 border-white"
+                  />
+                </div>
+              </div>
             </Link>
           </div>
 
@@ -141,11 +150,16 @@ export function Navbar() {
           <nav className="hidden md:flex md:gap-4 lg:gap-6">
             {navigation.slice(0, 2).map((item) => (
               <Button
+                className={` ${
+                  pathname === item.href ? "bg-green-700" : "ghost"
+                }`}
                 key={item.name}
                 variant={pathname === item.href ? "default" : "ghost"}
                 asChild
               >
-                <Link href={item.href}>{item.name}</Link>
+                <Link className="text-green-600" href={item.href}>
+                  {item.name}
+                </Link>
               </Button>
             ))}
 
@@ -154,7 +168,9 @@ export function Navbar() {
               <NavigationMenuList>
                 {/* Resources Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>একাডেমিক</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="text-green-600">
+                    একাডেমিক
+                  </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-2">
                       {resources.map((resource) => (
@@ -162,8 +178,11 @@ export function Navbar() {
                           key={resource.title}
                           href={resource.href}
                           title={resource.title}
+                          className="text-green-700"
                         >
-                          {resource.description}
+                          <span className="text-gray-600">
+                            {resource.description}
+                          </span>
                         </ListItem>
                       ))}
                     </ul>
@@ -172,7 +191,9 @@ export function Navbar() {
 
                 {/* Components Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>সুবিধা সমূহ</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="text-green-600">
+                    সুবিধা সমূহ
+                  </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                       {components.map((component) => (
@@ -180,8 +201,11 @@ export function Navbar() {
                           key={component.title}
                           href={component.href}
                           title={component.title}
+                          className="text-green-700"
                         >
-                          {component.description}
+                          <span className="text-gray-600">
+                            {component.description}
+                          </span>
                         </ListItem>
                       ))}
                     </ul>
@@ -192,11 +216,16 @@ export function Navbar() {
 
             {navigation.slice(3, navigation.length).map((item) => (
               <Button
+                className={` ${
+                  pathname === item.href ? "bg-green-700" : "ghost"
+                }`}
                 key={item.name}
                 variant={pathname === item.href ? "default" : "ghost"}
                 asChild
               >
-                <Link href={item.href}>{item.name}</Link>
+                <Link className="text-green-600" href={item.href}>
+                  {item.name}
+                </Link>
               </Button>
             ))}
           </nav>
@@ -225,15 +254,19 @@ export function Navbar() {
                 <DropdownMenuItem>Log out</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu> */}
-            <Button asChild variant="ghost">
+            <Button asChild variant="ghost" className="text-green-600">
               <Link href="/login">লগইন</Link>
             </Button>
 
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="md:hidden">
-                  <Menu className="h-5 w-5" />
+                <Button
+                  variant="default"
+                  size="icon"
+                  className="md:hidden text-green-600  bg-gray-300 hover:bg-gray-400"
+                >
+                  <Menu className="h-6 w-6" />
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
@@ -242,9 +275,18 @@ export function Navbar() {
                 className="w-[300px] sm:w-[400px] overflow-y-auto"
               >
                 <div className="flex flex-col gap-4 py-4">
-                  <Link href="/" className="flex items-center space-x-2 pl-4">
-                    <span className="inline-block h-6 w-6 rounded-full bg-primary"></span>
-                    {/* <span className="text-xl font-bold">SAHA AGENCY</span> */}
+                  <Link href="/" className="flex items-center -mt-3">
+                    <div className="relative">
+                      <div className="h-[60px] w-[60px] rounded-full ">
+                        <Image
+                          src="https://i.ibb.co.com/LD27kXxw/473068280-3922681521336562-55110548601466905-n-fotor-bg-remover-20250312165419.png"
+                          alt="Mohon Saha"
+                          width={70}
+                          height={70}
+                          className="h-full w-full rounded-full object-cover border-2 border-white"
+                        />
+                      </div>
+                    </div>
                   </Link>
 
                   {/* Regular navigation items */}
@@ -252,11 +294,15 @@ export function Navbar() {
                     <Button
                       key={item.name}
                       variant={pathname === item.href ? "default" : "ghost"}
-                      className="justify-start"
+                      className={`justify-start ${
+                        pathname === item.href ? "bg-green-700" : "ghost"
+                      }`}
                       asChild
                       onClick={() => setIsOpen(false)}
                     >
-                      <Link href={item.href}>{item.name}</Link>
+                      <Link className="text-green-600" href={item.href}>
+                        {item.name}
+                      </Link>
                     </Button>
                   ))}
 
@@ -269,7 +315,7 @@ export function Navbar() {
                     <CollapsibleTrigger asChild>
                       <Button
                         variant="ghost"
-                        className="justify-between w-full px-4"
+                        className="justify-between w-full px-4 text-green-600"
                       >
                         <span>একাডেমিক</span>
                         {mobileResourcesOpen ? (
@@ -284,7 +330,7 @@ export function Navbar() {
                         {resources.map((resource) => (
                           <div
                             key={resource.title}
-                            className="rounded-md p-2 hover:bg-accent"
+                            className="rounded-md p-2 hover:bg-accent text-green-700"
                           >
                             <Link
                               href={resource.href}
@@ -313,9 +359,9 @@ export function Navbar() {
                     <CollapsibleTrigger asChild>
                       <Button
                         variant="ghost"
-                        className="justify-between w-full px-4"
+                        className="justify-between w-full px-4 text-green-600"
                       >
-                        <span>সুবিধা সমূহ</span>
+                        <span className="">সুবিধা সমূহ</span>
                         {mobileComponentsOpen ? (
                           <ChevronDown className="h-4 w-4" />
                         ) : (
@@ -335,10 +381,10 @@ export function Navbar() {
                               className="block"
                               onClick={() => setIsOpen(false)}
                             >
-                              <div className="font-medium">
+                              <div className="font-medium text-green-700">
                                 {component.title}
                               </div>
-                              <p className="text-sm text-muted-foreground">
+                              <p className="text-sm text-muted-foreground ">
                                 {component.description}
                               </p>
                             </Link>
@@ -353,11 +399,15 @@ export function Navbar() {
                     <Button
                       key={item.name}
                       variant={pathname === item.href ? "default" : "ghost"}
-                      className="justify-start"
+                      className={`justify-start ${
+                        pathname === item.href ? "bg-green-700" : "ghost"
+                      }`}
                       asChild
                       onClick={() => setIsOpen(false)}
                     >
-                      <Link href={item.href}>{item.name}</Link>
+                      <Link className="text-green-600" href={item.href}>
+                        {item.name}
+                      </Link>
                     </Button>
                   ))}
                 </div>

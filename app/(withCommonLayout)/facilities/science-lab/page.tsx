@@ -15,7 +15,6 @@ import {
   ChevronRight,
   MapPin,
 } from "lucide-react";
-import Image from "next/image";
 
 // বিজ্ঞান ল্যাব সুবিধাসমূহের তথ্য
 const labFacilities = [
@@ -234,10 +233,10 @@ const ScienceLabFacilitiesPage: React.FC = () => {
         {/* নিয়মাবলী সেকশন */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl">
+            <CardTitle className="text-2xl text-red-600">
               ল্যাব ব্যবহারের নিয়মাবলী
             </CardTitle>
-            <CardDescription>
+            <CardDescription className="text-red-800">
               সকল শিক্ষার্থীদের নিরাপদ ও ফলপ্রসূ ল্যাব অভিজ্ঞতার জন্য এই
               নিয়মগুলি অনুসরণ করতে হবে
             </CardDescription>
@@ -246,10 +245,10 @@ const ScienceLabFacilitiesPage: React.FC = () => {
             <ul className="space-y-3">
               {labRules.map((rule, idx) => (
                 <li key={idx} className="flex items-start">
-                  <span className="bg-primary text-primary-foreground w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 mr-3 text-sm font-medium">
+                  <span className="bg-red-500 text-primary-foreground w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 mr-3 text-sm font-medium">
                     {idx + 1}
                   </span>
-                  <span>{rule}</span>
+                  <span className="text-red-800">{rule}</span>
                 </li>
               ))}
             </ul>

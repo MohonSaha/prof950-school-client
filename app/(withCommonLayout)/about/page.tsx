@@ -81,7 +81,7 @@ const AboutPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Modern Hero Section */}
-      <section className="relative py-24 bg-blue-600 text-white">
+      <section className="relative py-24 bg-green-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-6">
             {schoolData.name}
@@ -116,7 +116,7 @@ const AboutPage: React.FC = () => {
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="order-2 lg:order-1">
-                  <h2 className="text-3xl font-bold mb-6 text-blue-800">
+                  <h2 className="text-3xl font-bold mb-6 text-green-700">
                     আমাদের পরিচয়
                   </h2>
                   <p className="text-lg mb-6 text-gray-700">
@@ -125,14 +125,14 @@ const AboutPage: React.FC = () => {
 
                   <div className="space-y-6">
                     <div className="bg-blue-50 p-6 rounded-lg">
-                      <h3 className="text-xl font-semibold mb-3 text-blue-700">
+                      <h3 className="text-xl font-semibold mb-3 text-green-600">
                         আমাদের লক্ষ্য
                       </h3>
                       <p className="text-gray-700">{schoolData.mission}</p>
                     </div>
 
                     <div className="bg-indigo-50 p-6 rounded-lg">
-                      <h3 className="text-xl font-semibold mb-3 text-indigo-700">
+                      <h3 className="text-xl font-semibold mb-3 text-green-600">
                         আমাদের দর্শন
                       </h3>
                       <p className="text-gray-700">{schoolData.vision}</p>
@@ -147,7 +147,7 @@ const AboutPage: React.FC = () => {
                         key={index}
                         className="bg-white rounded-lg shadow p-6 flex flex-col items-center justify-center text-center"
                       >
-                        <span className="text-3xl font-bold text-blue-600 mb-2">
+                        <span className="text-3xl font-bold text-green-600 mb-2">
                           {fact.value}
                         </span>
                         <span className="text-gray-600">{fact.label}</span>
@@ -171,20 +171,20 @@ const AboutPage: React.FC = () => {
           {/* History Tab - Modern Design */}
           <TabsContent value="history">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-10 text-center text-blue-800">
+              <h2 className="text-3xl font-bold mb-10 text-center text-green-800">
                 আমাদের ইতিহাস
               </h2>
 
               <div className="space-y-6">
                 {schoolData.history.map((event, index) => (
                   <div key={index} className="flex gap-4">
-                    <div className="flex-none w-24 h-24 bg-blue-600 text-white rounded-lg flex items-center justify-center">
+                    <div className="flex-none w-24 h-24 bg-green-600 text-white rounded-lg flex items-center justify-center">
                       <div className="text-center">
                         <div className="text-2xl font-bold">{event.year}</div>
                       </div>
                     </div>
                     <div className="flex-1 bg-white p-6 rounded-lg shadow">
-                      <h3 className="text-xl font-bold text-blue-700 mb-2">
+                      <h3 className="text-xl font-bold text-green-700 mb-2">
                         {event.title}
                       </h3>
                       <p className="text-gray-600">{event.description}</p>
@@ -198,7 +198,7 @@ const AboutPage: React.FC = () => {
           {/* Leadership Tab - Modern Design */}
           <TabsContent value="leadership">
             <div className=" mx-auto">
-              <h2 className="text-3xl font-bold mb-10 text-center text-blue-800">
+              <h2 className="text-3xl font-bold mb-10 text-center text-green-800">
                 আমাদের নেতৃবৃন্দ
               </h2>
 
@@ -214,10 +214,10 @@ const AboutPage: React.FC = () => {
                       />
                     </div>
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-bold text-blue-800 mb-1">
+                      <h3 className="text-xl font-bold text-green-800 mb-1">
                         {member.name}
                       </h3>
-                      <p className="text-indigo-600 mb-3">{member.position}</p>
+                      <p className="text-green-600 mb-3">{member.position}</p>
                       <p className="text-gray-600">{member.bio}</p>
                     </CardContent>
                   </Card>

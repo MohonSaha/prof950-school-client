@@ -54,7 +54,7 @@ const ContactUs = () => {
   // School contact information
   const contactInfo = [
     {
-      icon: <Phone className="h-5 w-5 text-blue-600" />,
+      icon: <Phone className="h-5 w-5 text-green-600" />,
       title: "ফোন",
       details: [
         "প্রধান অফিস: ০১৭XXXXXXXX",
@@ -63,7 +63,7 @@ const ContactUs = () => {
       ],
     },
     {
-      icon: <Mail className="h-5 w-5 text-blue-600" />,
+      icon: <Mail className="h-5 w-5 text-green-600" />,
       title: "ইমেইল",
       details: [
         "প্রধান: principal@school.edu.bd",
@@ -72,7 +72,7 @@ const ContactUs = () => {
       ],
     },
     {
-      icon: <MapPin className="h-5 w-5 text-blue-600" />,
+      icon: <MapPin className="h-5 w-5 text-green-600" />,
       title: "ঠিকানা",
       details: [
         "শত্রুজিৎপুর আব্দুল গণি মাধ্যমিক বালিকা বিদ্যালয়,",
@@ -81,7 +81,7 @@ const ContactUs = () => {
       ],
     },
     {
-      icon: <Clock className="h-5 w-5 text-blue-600" />,
+      icon: <Clock className="h-5 w-5 text-green-600" />,
       title: "অফিস সময়",
       details: [
         "রবিবার - বৃহস্পতিবার: সকাল ৮টা - বিকাল ৪টা",
@@ -113,7 +113,7 @@ const ContactUs = () => {
   return (
     <div className="md:px-10 px-4 mt-4">
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold mb-4 text-blue-600">যোগাযোগ করুন</h1>
+        <h1 className="text-3xl font-bold mb-4 text-green-600">যোগাযোগ করুন</h1>
         <p className="text-lg max-w-3xl mx-auto text-gray-700">
           আমাদের স্কুল সম্পর্কে আরও জানতে বা যেকোনো প্রশ্নের জন্য আমাদের সাথে
           যোগাযোগ করুন। আমরা আপনাকে সাহায্য করতে সর্বদা প্রস্তুত।
@@ -125,7 +125,7 @@ const ContactUs = () => {
         <div className="lg:col-span-1">
           <Card className="h-full">
             <CardHeader>
-              <CardTitle className="text-xl text-blue-700">
+              <CardTitle className="text-xl text-green-700">
                 যোগাযোগ তথ্য
               </CardTitle>
               <CardDescription>আমাদের সাথে সরাসরি যোগাযোগ করুন</CardDescription>
@@ -133,11 +133,11 @@ const ContactUs = () => {
             <CardContent className="space-y-6">
               {contactInfo.map((item, index) => (
                 <div key={index} className="flex gap-3">
-                  <div className="mt-1 bg-blue-50 p-2 rounded-full">
+                  <div className="mt-1 bg-green-50 p-2 rounded-full">
                     {item.icon}
                   </div>
                   <div>
-                    <h3 className="font-medium text-blue-800">{item.title}</h3>
+                    <h3 className="font-medium text-green-800">{item.title}</h3>
                     <div className="mt-1 space-y-1 text-sm text-gray-600">
                       {item.details.map((line, i) => (
                         <p key={i}>{line}</p>
@@ -148,7 +148,7 @@ const ContactUs = () => {
               ))}
 
               <div className="pt-4 border-t mt-6">
-                <h3 className="font-medium text-blue-800 mb-3">
+                <h3 className="font-medium text-green-800 mb-3">
                   সোশ্যাল মিডিয়া
                 </h3>
                 <div className="flex gap-3">
@@ -158,7 +158,7 @@ const ContactUs = () => {
                       href={social.url}
                       target="_blank"
                       rel="noreferrer"
-                      className="bg-blue-100 hover:bg-blue-200 transition-colors p-2 rounded-full"
+                      className="bg-green-100 hover:bg-green-200 transition-colors p-2 rounded-full"
                     >
                       {social.icon}
                     </a>
@@ -275,7 +275,7 @@ const ContactUs = () => {
                     <Button
                       type="submit"
                       onClick={handleSubmit}
-                      className="bg-blue-600 hover:bg-blue-700 text-white flex items-center gap-2"
+                      className="bg-green-600 hover:bg-green-700 text-white flex items-center gap-2"
                     >
                       <Send className="h-4 w-4" />
                       বার্তা পাঠান
@@ -309,7 +309,7 @@ const ContactUs = () => {
                   </div>
 
                   <div className="mt-4 p-4 bg-blue-50 rounded-lg">
-                    <h3 className="font-medium text-blue-800 mb-2">
+                    <h3 className="font-medium text-green-800 mb-2">
                       যাতায়াত নির্দেশনা
                     </h3>
                     <ul className="list-disc pl-5 space-y-1 text-sm">
@@ -333,7 +333,7 @@ const ContactUs = () => {
                     href="https://www.openstreetmap.org/?mlat=23.419547&mlon=89.486752#map=15/23.419547/89.486752"
                     target="_blank"
                     rel="noreferrer"
-                    className="text-blue-600 hover:text-blue-800 text-sm flex items-center gap-1"
+                    className="text-green-600 hover:text-green-800 text-sm flex items-center gap-1"
                   >
                     <MapPin className="h-4 w-4" />
                     পূর্ণ মানচিত্রে দেখুন
@@ -346,8 +346,8 @@ const ContactUs = () => {
       </div>
 
       {/* FAQ Section */}
-      <div className="max-w-4xl mx-auto mt-16">
-        <h2 className="text-2xl font-bold text-center mb-6 text-blue-700">
+      <div className="max-w-7xl mx-auto mt-16 mb-16">
+        <h2 className="text-2xl font-bold text-center mb-6 text-green-700">
           সাধারণ জিজ্ঞাসা
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

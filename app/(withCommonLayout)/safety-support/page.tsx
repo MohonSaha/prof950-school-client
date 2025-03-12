@@ -254,7 +254,7 @@ const SafetyAndSupport = () => {
                   </CardContent>
                   <CardFooter>
                     <Button
-                      className="w-full bg-blue-600 hover:bg-blue-700"
+                      className="w-full bg-green-600 hover:bg-green-700"
                       onClick={() => setIsOpen(true)}
                     >
                       ফর্ম পূরণ করুন
@@ -314,7 +314,7 @@ const SafetyAndSupport = () => {
           টলারেন্স নীতি রয়েছে।
         </p>
         <div className="flex justify-center">
-          <Button className="bg-blue-600 hover:bg-blue-700">
+          <Button className="bg-green-600 hover:bg-green-700">
             আমাদের নীতিমালা দেখুন
           </Button>
         </div>
