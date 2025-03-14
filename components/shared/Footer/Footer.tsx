@@ -591,6 +591,7 @@ const Footer = () => {
                     "প্রিয় মোহন সাহা,\n\nআমি আপনার ডিজাইন করা শত্রুজিৎপুর আব্দুল গণি মাধ্যমিক বালিকা বিদ্যালয়ের ওয়েবসাইট দেখেছি এবং আপনার সাথে যোগাযোগ করতে চাই।\n\n[আপনার অনুসন্ধান/প্রশ্ন এখানে লিখুন]\n\nধন্যবাদ,\n[আপনার নাম]"
                   )}`}
                   className="flex items-center justify-center md:justify-end text-sm text-blue-300 hover:text-blue-200"
+                  target="_blank"
                 >
                   <Mail size={16} className="mr-1" />
                   mohonsaha108@gmail.com
