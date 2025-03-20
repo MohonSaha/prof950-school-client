@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import MyButton from "@/components/shared/Button";
 
 interface Teacher {
   id: string;
@@ -16,75 +17,76 @@ const TeacherSection: React.FC = () => {
   const teachers: Teacher[] = [
     {
       id: "1",
-      name: "K.S.A Firzan",
-      role: "Assistant Teacher",
-      qualification: "BA (Hons), MA (English)",
-      imageSrc: "https://i.ibb.co.com/hZ1TDxY/IMG-20211101-175750.jpg",
+      name: "কে.এস.এ ফিরজান",
+      role: "সহকারী শিক্ষক",
+      qualification: "বি.এ (অনার্স), এম.এ (ইংরেজি)",
+      imageSrc: "https://i.ibb.co.com/993bjTXy/462719185-3803756793225010-4459295209552193269-n.jpg",
     },
     {
       id: "2",
-      name: "MD FORHAD HOSSAN",
-      role: "Assistant Teacher",
-      qualification: "B.Sc., MA (Science)",
-      imageSrc: "https://i.ibb.co.com/hZ1TDxY/IMG-20211101-175750.jpg",
+      name: "মোঃ ফরহাদ হোসেন",
+      role: "সহকারী শিক্ষক",
+      qualification: "বি.এসসি, এম.এ (বিজ্ঞান)",
+      imageSrc: "https://i.ibb.co.com/993bjTXy/462719185-3803756793225010-4459295209552193269-n.jpg",
     },
     {
       id: "3",
-      name: "Rashid Hossain",
-      role: "Senior Teacher",
-      qualification: "B.Ed, M.Ed (Mathematics)",
-      imageSrc: "https://i.ibb.co.com/hZ1TDxY/IMG-20211101-175750.jpg",
+      name: "রাশিদ হোসেন",
+      role: "সিনিয়র শিক্ষক",
+      qualification: "বি.এড, এম.এড (গণিত)",
+      imageSrc: "https://i.ibb.co.com/993bjTXy/462719185-3803756793225010-4459295209552193269-n.jpg",
     },
     {
       id: "4",
-      name: "MD Mahmudur Kabir",
-      role: "Assistant Teacher",
-      qualification: "BSS, MSS (Social Science)",
-      imageSrc: "https://i.ibb.co.com/hZ1TDxY/IMG-20211101-175750.jpg",
+      name: "মোঃ মাহমুদুর কবির",
+      role: "সহকারী শিক্ষক",
+      qualification: "বি.এস.এস, এম.এস.এস (সমাজবিজ্ঞান)",
+      imageSrc: "https://i.ibb.co.com/993bjTXy/462719185-3803756793225010-4459295209552193269-n.jpg",
     },
     {
       id: "5",
-      name: "MD Sammiunnoor",
-      role: "Assistant Teacher",
-      qualification: "BA, MA (Bangla)",
-      imageSrc: "https://i.ibb.co.com/hZ1TDxY/IMG-20211101-175750.jpg",
+      name: "মোঃ সামিউন্নূর",
+      role: "সহকারী শিক্ষক",
+      qualification: "বি.এ, এম.এ (বাংলা)",
+      imageSrc: "https://i.ibb.co.com/993bjTXy/462719185-3803756793225010-4459295209552193269-n.jpg",
     },
     {
       id: "6",
-      name: "Ismaynul Kabir",
-      role: "Assistant Teacher",
-      qualification: "B.Sc. (Science)",
-      imageSrc: "https://i.ibb.co.com/hZ1TDxY/IMG-20211101-175750.jpg",
+      name: "ইসমাইনুল কবির",
+      role: "সহকারী শিক্ষক",
+      qualification: "বি.এসসি (বিজ্ঞান)",
+      imageSrc: "https://i.ibb.co.com/993bjTXy/462719185-3803756793225010-4459295209552193269-n.jpg",
     },
     {
       id: "7",
-      name: "MD Nasimul Islam",
-      role: "Academic Teacher",
-      qualification: "B.Com, M.Com (Commerce)",
-      imageSrc: "https://i.ibb.co.com/hZ1TDxY/IMG-20211101-175750.jpg",
+      name: "মোঃ নাসিমুল ইসলাম",
+      role: "একাডেমিক শিক্ষক",
+      qualification: "বি.কম, এম.কম (বাণিজ্য)",
+      imageSrc: "https://i.ibb.co.com/993bjTXy/462719185-3803756793225010-4459295209552193269-n.jpg",
     },
     {
       id: "8",
-      name: "MD Shahidul Rahman",
-      role: "Assistant Teacher",
-      qualification: "BSS, MSS (Social Science)",
-      imageSrc: "https://i.ibb.co.com/hZ1TDxY/IMG-20211101-175750.jpg",
+      name: "মোঃ শাহিদুল রহমান",
+      role: "সহকারী শিক্ষক",
+      qualification: "বি.এস.এস, এম.এস.এস (সমাজবিজ্ঞান)",
+      imageSrc: "https://i.ibb.co.com/993bjTXy/462719185-3803756793225010-4459295209552193269-n.jpg",
     },
     {
       id: "9",
-      name: "MD Arifuzzaman (Jibon)",
-      role: "Assistant Teacher",
-      qualification: "BSS, MSS (Geography)",
-      imageSrc: "https://i.ibb.co.com/hZ1TDxY/IMG-20211101-175750.jpg",
+      name: "মোঃ আরিফুজ্জামান (জীবন)",
+      role: "সহকারী শিক্ষক",
+      qualification: "বি.এস.এস, এম.এস.এস (ভূগোল)",
+      imageSrc: "https://i.ibb.co.com/993bjTXy/462719185-3803756793225010-4459295209552193269-n.jpg",
     },
     {
       id: "10",
-      name: "Moniruj Jahan Mobin",
-      role: "Assistant Teacher",
-      qualification: "B.Sc, M.Sc (Computer Science)",
-      imageSrc: "https://i.ibb.co.com/hZ1TDxY/IMG-20211101-175750.jpg",
+      name: "মনিরুজ জাহান মবিন",
+      role: "সহকারী শিক্ষক",
+      qualification: "বি.এসসি, এম.এসসি (কম্পিউটার বিজ্ঞান)",
+      imageSrc: "https://i.ibb.co.com/993bjTXy/462719185-3803756793225010-4459295209552193269-n.jpg",
     },
   ];
+
 
   // Split teachers into two groups for two carousels
   const firstRowTeachers = teachers.slice(0, 5);
@@ -153,15 +155,15 @@ const TeacherSection: React.FC = () => {
   //   };
 
   return (
-    <div className="w-full px-4 py-8 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
+    <div className="w-full  py-8 ">
+      <div className="px-4 md:px-10 mx-auto">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold mb-2">
-            <span className="text-gray-800">একাডেমিক আমাদের</span>
-            <span className="text-purple-600"> শিক্ষক </span>
+            <span className="text-gray-800">আমাদের</span>
+            <span className="text-green-600"> শিক্ষক </span>
             <span className="text-gray-800">মন্ডলী</span>
           </h2>
-          <p className="text-gray-600">সকল একটি শিক্ষক এবং শিক্ষিত</p>
+          <p className="text-gray-600">সকল শিক্ষক এবং শিক্ষিকা</p>
         </div>
 
         {/* First Carousel */}
@@ -237,10 +239,11 @@ const TeacherSection: React.FC = () => {
         </div>
 
         {/* View All Teachers Button */}
-        <div className="flex justify-center mt-8">
-          <Button className="bg-gray-700 hover:bg-gray-800 text-white rounded-md py-2 px-8">
+        <div className="flex justify-center mt-4">
+          {/* <Button className="bg-gray-700 hover:bg-gray-800 text-white rounded-md py-2 px-8">
             সকল শিক্ষক দেখুন
-          </Button>
+          </Button> */}
+          <MyButton>সকল শিক্ষক দেখুন</MyButton>
         </div>
       </div>
     </div>

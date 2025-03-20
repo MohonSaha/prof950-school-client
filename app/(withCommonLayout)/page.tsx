@@ -82,57 +82,48 @@ const HomePage = () => {
 
   const classrooms = [
     {
-      id: 1,
-      title: "প্রথম শ্রেণী",
-      count: 15,
-      description:
-        "প্রাথমিক শিক্ষার জন্য আদর্শ ক্লাসরুম ও শিক্ষক, নিয়মিত ভাল উদ্দেশ্য ক্লাসের পরিবেশ এবং মানদণ্ড",
-      imageUrl: "https://i.ibb.co.com/z8zS0WS/forest-3622519-640.jpg",
-      buttonText: "বিস্তারিত দেখুন",
-    },
-    {
-      id: 2,
-      title: "দ্বিতীয় শ্রেণী",
-      count: 12,
-      description:
-        "দ্বিতীয় শ্রেণি শিক্ষার জন্য আদর্শ ক্লাসরুম ও শিক্ষক, রচনামূলক শিক্ষাপদ্ধতি উন্নয়ন এবং গাইডবুক",
-      imageUrl: "https://i.ibb.co.com/bFtwpFN/death.jpg",
-      buttonText: "বিস্তারিত দেখুন",
-    },
-    {
-      id: 3,
-      title: "তৃতীয় শ্রেণী",
-      count: 13,
-      description:
-        "তৃতীয় শ্রেণি শিক্ষার জন্য আদর্শ ক্লাসরুম ও শিক্ষক, রচনামূলক শিক্ষাপদ্ধতি উন্নয়ন এবং গাইডবুক",
-      imageUrl: "https://i.ibb.co.com/z8zS0WS/forest-3622519-640.jpg",
-      buttonText: "বিস্তারিত দেখুন",
-    },
-    {
-      id: 4,
-      title: "চতুর্থ শ্রেণী",
-      count: 32,
-      description:
-        "চতুর্থ শ্রেণি শিক্ষার জন্য আদর্শ ক্লাসরুম ও শিক্ষক, রচনামূলক শিক্ষাপদ্ধতি উন্নয়ন এবং গাইডবুক",
-      imageUrl: "https://i.ibb.co.com/bFtwpFN/death.jpg",
-      buttonText: "বিস্তারিত দেখুন",
-    },
-    {
-      id: 5,
-      title: "পঞ্চম শ্রেণী",
-      count: 18,
-      description:
-        "পঞ্চম শ্রেণি শিক্ষার জন্য আদর্শ ক্লাসরুম ও শিক্ষক, রচনামূলক শিক্ষাপদ্ধতি উন্নয়ন এবং গাইডবুক",
-      imageUrl: "https://i.ibb.co.com/z8zS0WS/forest-3622519-640.jpg",
-      buttonText: "বিস্তারিত দেখুন",
-    },
-    {
       id: 6,
       title: "ষষ্ঠ শ্রেণী",
       count: 22,
       description:
-        "ষষ্ঠ শ্রেণি শিক্ষার জন্য আদর্শ ক্লাসরুম ও শিক্ষক, রচনামূলক শিক্ষাপদ্ধতি উন্নয়ন এবং গাইডবুক",
+        "ষষ্ঠ শ্রেণি শিক্ষার জন্য আদর্শ ক্লাসরুম ও শিক্ষক, রচনামূলক শিক্ষাপদ্ধতি উন্নয়ন এবং গাইডবুক।",
       imageUrl: "https://i.ibb.co.com/bFtwpFN/death.jpg",
+      buttonText: "বিস্তারিত দেখুন",
+    },
+    {
+      id: 7,
+      title: "সপ্তম শ্রেণী",
+      count: 25,
+      description:
+        "সপ্তম শ্রেণিতে উন্নত পাঠ্যক্রম, হাতে-কলমে শেখার সুযোগ এবং পরীক্ষার প্রস্তুতির জন্য বিশেষ গাইডলাইন।",
+      imageUrl: "https://i.ibb.co.com/YBQYw6bR/real-2.jpg",
+      buttonText: "বিস্তারিত দেখুন",
+    },
+    {
+      id: 8,
+      title: "অষ্টম শ্রেণী",
+      count: 28,
+      description:
+        "অষ্টম শ্রেণিতে প্রাক-জেএসসি প্রস্তুতি, বিজ্ঞান ও গণিতের বিশেষ কর্মশালা এবং উন্নত শিক্ষামূলক কার্যক্রম।",
+      imageUrl: "https://i.ibb.co.com/LDfhVHzs/real-1.jpg",
+      buttonText: "বিস্তারিত দেখুন",
+    },
+    {
+      id: 9,
+      title: "নবম শ্রেণী",
+      count: 30,
+      description:
+        "নবম শ্রেণিতে এসএসসি ভিত্তিক শিক্ষার প্রস্তুতি, নির্বাচিত বিষয়ে গভীরতর বিশ্লেষণ এবং ল্যাব কার্যক্রম।",
+      imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      buttonText: "বিস্তারিত দেখুন",
+    },
+    {
+      id: 10,
+      title: "দশম শ্রেণী",
+      count: 35,
+      description:
+        "দশম শ্রেণিতে এসএসসি পরীক্ষার জন্য বিশেষ প্রস্তুতি ক্লাস, মডেল টেস্ট এবং বিষয়ভিত্তিক গাইডলাইন।",
+      imageUrl: "https://i.ibb.co.com/LDfhVHzs/real-1.jpg",
       buttonText: "বিস্তারিত দেখুন",
     },
   ];
@@ -145,7 +136,7 @@ const HomePage = () => {
       <BrilliantStudentSection />
 
       <SchoolIntroductionSection rounded={false} />
-      <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+      <main className="min-h-screen">
         <div className=" py-12 ">
           <EnhancedGallery
             images={galleryImages}
@@ -156,8 +147,6 @@ const HomePage = () => {
       </main>
       <ClassroomCarousel
         classrooms={classrooms}
-        title="একনজরে স্কুলের শ্রেণি কক্ষ গুলো"
-        subtitle="প্লে থেকে দশম শ্রেণী পর্যন্ত যা যা থাকছে।"
       />
       <TeacherSection />
     </div>

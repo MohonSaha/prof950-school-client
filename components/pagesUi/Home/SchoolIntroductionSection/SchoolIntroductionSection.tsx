@@ -16,30 +16,31 @@ const SchoolIntroductionSection = ({ rounded }: { rounded?: boolean }) => {
   const schoolContent: SchoolContent[] = [
     {
       image: "https://i.ibb.co.com/LDfhVHzs/real-1.jpg",
-      title: "Our School History",
+      title: "আমাদের স্কুলের ইতিহাস",
       content:
-        "Founded in 1975, our school began as a small institution with just 3 classrooms and 5 teachers. Over the decades, we've grown into one of the region's most respected educational institutions. Our commitment to excellence in education has remained unchanged throughout our journey. The school was established by a group of visionary educators with the mission of providing quality education that balances academic achievement with character development.",
+        "১৯৭৫ সালে প্রতিষ্ঠিত, আমাদের স্কুল একটি ছোট প্রতিষ্ঠান হিসেবে শুরু হয়েছিল যেখানে মাত্র ৩টি শ্রেণিকক্ষ এবং ৫ জন শিক্ষক ছিলেন। বছরের পর বছর ধরে, আমরা অঞ্চলের অন্যতম সম্মানিত শিক্ষাপ্রতিষ্ঠানে পরিণত হয়েছি। শিক্ষার উৎকর্ষ সাধনে আমাদের প্রতিশ্রুতি সবসময় অটুট থেকেছে। একটি দূরদর্শী শিক্ষাবিদের দল এই স্কুলটি প্রতিষ্ঠা করেছিলেন, যার লক্ষ্য ছিল মানসম্পন্ন শিক্ষার মাধ্যমে শিক্ষার্থীদের একাডেমিক দক্ষতা ও নৈতিক গুণাবলির বিকাশ ঘটানো।",
     },
     {
       image: "https://i.ibb.co.com/YBQYw6bR/real-2.jpg",
-      title: "Academic Excellence",
+      title: "একাডেমিক উৎকর্ষতা",
       content:
-        "Our school consistently achieves outstanding academic results, with over 95% of our students qualifying for higher education. We offer a comprehensive curriculum that includes sciences, humanities, arts, and technology. Our teaching methodology emphasizes critical thinking, problem-solving, and creativity. We maintain small class sizes to ensure personalized attention for each student, and our faculty members are highly qualified professionals who regularly participate in professional development programs.",
+        "আমাদের স্কুল ধারাবাহিকভাবে অসাধারণ একাডেমিক ফলাফল অর্জন করে আসছে, যেখানে ৯৫% এর বেশি শিক্ষার্থী উচ্চশিক্ষার জন্য যোগ্যতা অর্জন করে। আমরা একটি বিস্তৃত পাঠ্যক্রম অফার করি যা বিজ্ঞান, মানবিক, শিল্প এবং প্রযুক্তি অন্তর্ভুক্ত করে। আমাদের শিক্ষণ পদ্ধতি সমালোচনামূলক চিন্তাভাবনা, সমস্যা সমাধান এবং সৃজনশীলতাকে গুরুত্ব দেয়। শিক্ষার্থীদের ব্যক্তিগত মনোযোগ নিশ্চিত করতে আমরা ছোট শ্রেণির আয়োজন করি এবং আমাদের শিক্ষকরা পেশাগত উন্নয়ন কর্মসূচিতে নিয়মিত অংশগ্রহণ করেন।",
     },
     {
       image:
         "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Campus Facilities",
+      title: "ক্যাম্পাস সুবিধাসমূহ",
       content:
-        "Our campus spans over 5 acres with modern facilities that create an ideal learning environment. We have state-of-the-art science and computer laboratories, a well-stocked library with over 15,000 books, spacious classrooms equipped with digital learning tools, dedicated art and music studios, and extensive sports facilities including a multi-purpose indoor gymnasium and outdoor playing fields for cricket, football, and athletics. We also maintain a cafeteria that serves nutritious meals prepared under strict hygiene standards.",
+        "আমাদের ক্যাম্পাসটি ৫ একরেরও বেশি এলাকা জুড়ে বিস্তৃত, যা একটি আদর্শ শিক্ষার পরিবেশ তৈরি করে। এখানে রয়েছে অত্যাধুনিক বিজ্ঞান ও কম্পিউটার ল্যাব, ১৫,০০০ এরও বেশি বই সমৃদ্ধ একটি সমৃদ্ধ গ্রন্থাগার, ডিজিটাল লার্নিং টুলসসহ সুসজ্জিত শ্রেণিকক্ষ, শিল্প ও সংগীত স্টুডিও, এবং বিস্তৃত ক্রীড়া সুবিধা। এছাড়াও, আমাদের একটি বহুমুখী ইনডোর জিমনেসিয়াম এবং আউটডোর খেলার মাঠ রয়েছে, যেখানে ক্রিকেট, ফুটবল এবং অ্যাথলেটিকস অনুশীলনের সুযোগ রয়েছে। আমাদের ক্যাফেটেরিয়া স্বাস্থ্যকর পরিবেশে পুষ্টিকর খাবার সরবরাহ করে।",
     },
     {
       image: "https://i.ibb.co.com/LDfhVHzs/real-1.jpg",
-      title: "Community Engagement",
+      title: "সামাজিক সম্পৃক্ততা",
       content:
-        "We believe that education extends beyond classroom walls. Our students actively participate in community service projects, environmental initiatives, and cultural exchange programs. Through these activities, they develop empathy, social responsibility, and global awareness. We regularly organize parent-teacher meetings, community events, and open houses to strengthen the bond between the school, parents, and the wider community. Our annual cultural festival showcases student talents and celebrates our diverse heritage.",
+        "আমরা বিশ্বাস করি, শিক্ষা শুধু শ্রেণিকক্ষে সীমাবদ্ধ নয়। আমাদের শিক্ষার্থীরা সক্রিয়ভাবে সামাজিক সেবামূলক কার্যক্রম, পরিবেশ রক্ষা উদ্যোগ এবং সাংস্কৃতিক বিনিময় প্রোগ্রামে অংশগ্রহণ করে। এর মাধ্যমে তারা সহমর্মিতা, সামাজিক দায়বদ্ধতা এবং বিশ্বজনীন সচেতনতা অর্জন করে। আমরা নিয়মিত অভিভাবক-শিক্ষক সভা, কমিউনিটি ইভেন্ট এবং উন্মুক্ত আলোচনা সভার আয়োজন করি, যা স্কুল, অভিভাবক ও বৃহত্তর সমাজের মধ্যে সম্পর্ক দৃঢ় করে। আমাদের বার্ষিক সাংস্কৃতিক উৎসবে শিক্ষার্থীদের প্রতিভা প্রদর্শিত হয় এবং আমাদের বৈচিত্র্যময় ঐতিহ্য উদযাপন করা হয়।",
     },
   ];
+
 
   const nextContent = () => {
     setCurrentIndex((prevIndex) =>
@@ -88,7 +89,7 @@ const SchoolIntroductionSection = ({ rounded }: { rounded?: boolean }) => {
 
       {/* Right side - School Information */}
       <div
-        className={`w-full md:w-1/2 bg-gray-900 text-white p-8 md:p-12 ${
+        className={`w-full md:w-1/2 bg-green-900 text-white p-8 md:p-12 ${
           rounded ? "rounded-r-sm" : ""
         }`}
       >

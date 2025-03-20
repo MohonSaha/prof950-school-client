@@ -108,14 +108,14 @@ const CustomLayoutGallery: React.FC<CustomLayoutGalleryProps> = ({
 
   return (
     <div className="py-8 md:px-10 px-4">
-      <header className=" py-6">
-        <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center">
-            একনজরে স্কুলের গ্যালারি দেখুন
-          </h1>
-          <p className="text-center mt-2 ">
-            স্কুলের অনুষ্ঠান এবং বিভিন্ন সেলিব্রেশন পিকচার গুলো
-          </p>
+      <header className="py-6">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-2">
+            <span className="text-gray-800">একনজরে স্কুলের</span>
+            <span className="text-green-600"> গ্যালারি </span>
+            <span className="text-gray-800">দেখুন</span>
+          </h2>
+          <p className="text-gray-600">স্কুলের অনুষ্ঠান এবং বিভিন্ন সেলিব্রেশন পিকচার গুলো</p>
         </div>
       </header>
 

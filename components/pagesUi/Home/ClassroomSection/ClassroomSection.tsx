@@ -17,15 +17,11 @@ interface Classroom {
 
 interface ClassroomCarouselProps {
   classrooms: Classroom[];
-  title: string;
-  subtitle: string;
   autoplayInterval?: number; // Time in milliseconds between auto slides
 }
 
 const ClassroomCarousel: React.FC<ClassroomCarouselProps> = ({
   classrooms,
-  title,
-  subtitle,
   autoplayInterval = 3000, // Default 3 seconds
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -146,19 +142,18 @@ const ClassroomCarousel: React.FC<ClassroomCarouselProps> = ({
   const circularClassrooms = getCircularClassrooms();
 
   return (
-    <div className="w-full bg-gray-100 py-8 md:px-8 px-4">
+    <div className="w-full  py-8 md:px-8 px-4">
       <div className="">
         {/* Title Section */}
         <div className="mb-6 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2">
-            <span className="text-gray-800">
-              {title.split(" ").slice(0, -1).join(" ")}
-            </span>
-            <span className="text-purple-600">
-              {title.split(" ").slice(-1)}
-            </span>
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-2">
+            <span className="text-gray-800">একনজরে স্কুলের</span>
+            <span className="text-green-600"> শ্রেণিকক্ষ </span>
+            <span className="text-gray-800">গুলো </span>
           </h2>
-          <p className="text-gray-600">{subtitle}</p>
+          <p className="text-gray-600">ষষ্ঠ থেকে দশম শ্রেণী পর্যন্ত যা যা থাকছে।</p>
+        </div>
         </div>
 
         {/* Carousel Container with Overflow Hidden */}
@@ -190,10 +185,10 @@ const ClassroomCarousel: React.FC<ClassroomCarouselProps> = ({
                   </div>
                   <CardContent className="px-4">
                     <div className="flex justify-between items-center mb-2">
-                      <h3 className="text-purple-600 font-bold">
+                      <h3 className="text-green-600 font-bold">
                         {classroom.title}
                       </h3>
-                      <span className="text-purple-600 font-bold">
+                      <span className="text-green-600 font-bold">
                         {classroom.count}
                       </span>
                     </div>
@@ -202,7 +197,7 @@ const ClassroomCarousel: React.FC<ClassroomCarouselProps> = ({
                     </p>
                   </CardContent>
                   <CardFooter className="p-4 pt-0">
-                    <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white cursor-pointer">
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white cursor-pointer">
                       {classroom.buttonText}
                     </Button>
                   </CardFooter>
@@ -216,20 +211,20 @@ const ClassroomCarousel: React.FC<ClassroomCarouselProps> = ({
             <Button
               variant="outline"
               size="icon"
-              className="rounded-full bg-white hover:bg-gray-100 border-purple-200 shadow-md cursor-pointer pointer-events-auto"
+              className="rounded-full bg-white hover:bg-gray-100 border-black shadow-md cursor-pointer pointer-events-auto"
               onClick={() => handleUserNavigation(handlePrev)}
               aria-label="Previous slide"
             >
-              <ChevronLeft className="h-10 w-10 text-purple-600" />
+              <ChevronLeft className="h-10 w-10 text-black" />
             </Button>
             <Button
               variant="outline"
               size="icon"
-              className="cursor-pointer rounded-full bg-white hover:bg-gray-100 border-purple-200 shadow-md pointer-events-auto"
+              className="cursor-pointer rounded-full bg-white hover:bg-gray-100 border-black shadow-md pointer-events-auto"
               onClick={() => handleUserNavigation(handleNext)}
               aria-label="Next slide"
             >
-              <ChevronRight className="h-6 w-6 text-purple-600" />
+              <ChevronRight className="h-6 w-6 text-black" />
             </Button>
           </div>
         </div>
@@ -240,7 +235,7 @@ const ClassroomCarousel: React.FC<ClassroomCarouselProps> = ({
             <button
               key={idx}
               className={`h-2 rounded-full transition-all duration-300 ${
-                currentIndex === idx ? "bg-purple-600 w-6" : "bg-gray-300 w-2"
+                currentIndex === idx ? "bg-green-600 w-6" : "bg-gray-300 w-2"
               }`}
               onClick={() => handleUserNavigation(() => setCurrentIndex(idx))}
               aria-label={`Go to slide ${idx + 1}`}

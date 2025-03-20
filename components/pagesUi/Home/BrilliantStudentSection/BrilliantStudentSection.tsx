@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import MyButton from "@/components/shared/Button";
 
 interface Teacher {
   id: string;
@@ -139,7 +140,7 @@ const BrilliantStudentSection: React.FC = () => {
 
   return (
     <div className="w-full px-4 py-8 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
+      <div className="md:px-6 mx-auto">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold mb-2">
             <span className="text-gray-800">একনজরে</span>
@@ -225,10 +226,11 @@ const BrilliantStudentSection: React.FC = () => {
         </div>
 
         {/* View All Teachers Button */}
-        <div className="flex justify-center mt-8">
-          <Button className="bg-gray-700 hover:bg-gray-800 text-white rounded-md py-2 px-8">
+        <div className="flex justify-center mt-4">
+          {/* <Button className="bg-gray-700 hover:bg-gray-800 text-white rounded-md py-2 px-8">
             সকল শিক্ষক দেখুন
-          </Button>
+          </Button> */}
+          <MyButton>সকল শিক্ষার্থী দেখুন</MyButton>
         </div>
       </div>
     </div>
